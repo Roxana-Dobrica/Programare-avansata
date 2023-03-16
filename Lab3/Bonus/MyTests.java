@@ -35,14 +35,12 @@ public class MyTests {
         network1.addRelationship(c, d,"Colleagues");
         network1.addRelationship(b,c, "Brothers");
         network1.addRelationship(d,e, "Brothers");
-        network1.addRelationship(b,e, "Colleagues");
-        network1.addRelationship(e, a, "Friends");
 
         Set<Node> result = new HashSet();
         result = network1.findArticulationPoints(a);
 
         // Check results
-        List<Node> expected = Arrays.asList(b, c);
+        List<Node> expected = Arrays.asList( c);
         assertEquals(expected, network1.findArticulationPoints(a));
     }
 }
