@@ -52,6 +52,7 @@ public class Problem {
             isAvailable.put(proj, true);
         }
 
+        //vom cauta pentru fiecare student primul proiect din lista lui care este disponibil
         for (Student student : preferencesMap.keySet()) {
             int i = 0;
             List<Project> studentProjectsList = new ArrayList<>();
