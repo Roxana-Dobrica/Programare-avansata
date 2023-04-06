@@ -14,7 +14,7 @@ import org.apache.tika.exception.TikaException;
  */
 public class Main {
 
-    public static void main(String args[]) throws IOException, TikaException{
+    public static void main(String args[]) throws IOException {
         Main app = new Main();
         app.testCreateSave();
         //app.testLoadView();
