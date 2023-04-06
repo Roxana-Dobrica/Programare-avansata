@@ -47,9 +47,4 @@ public class GetMetadata {
         }
     }
 
-    public void info(Catalog catalog) {
-        for (Document document : catalog.getDocuments()) {
-            System.out.println(document.getTags());
-        }
-    }
 }

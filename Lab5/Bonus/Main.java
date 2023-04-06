@@ -37,7 +37,8 @@ public class Main {
         
         GetMetadata metadata = new GetMetadata();
         metadata.extractMetadata(catalog);
-        metadata.info(catalog);
+        InfoCommand information = new InfoCommand();
+        information.info(catalog);
         
         Coloring coloring1 = new Coloring();
         coloring1.greedyColoring(catalog);
