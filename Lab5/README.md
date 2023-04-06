@@ -1,0 +1,8 @@
+Laboratorul 5
+
+La tema am rezolvat toate punctele. Am adaugat aici si arhiva JAR.
+
+La bonus am extras metadata din documentele din catalog si am implementat comanda "info" pentru a afisa tag-urile (atat metadata, cat si tag-urile setate de user). De asemenea, am implementat si metoda "areRelated()", care determina daca 2 documente au vreun tag comun, precum si un algoritm Greedy pentru problema colorarii grafului, utilizand Graph4J. 
+Initial am creat un graf cu Graph4J avand ca noduri documentele din catalog, iar pentru a crea muchiile am utilizat metoda "areRelated()", trasand o muchie intre documentele care au cel putin un tag comun. Apoi in algoritmul Greedy, se inițializează un vector de culori cu -1 pentru fiecare nod, semnificând că niciun nod nu are încă o culoare asignată.
+Mai departe, primul nod primește prima culoare, iar culorile disponibile sunt marcate cu true pentru fiecare nod. Apoi, se atribuie culori celorlalte noduri (de la al doilea la ultimul nod) în funcție de culorile deja asignate vecinilor lor. Se parcurg toți vecinii fiecărui nod și se marchează culorile lor ca indisponibile (false). Apoi, se găsește prima culoare disponibilă (prima culoare astfel incat available[col] sa fie true) și se atribuie nodului respectiv. Dupa, se reseteaza din nou valorile cu true in "available" pentru urmatoarea iteratie.
+În cele din urmă, se afișează nodurile și culorile lor.
