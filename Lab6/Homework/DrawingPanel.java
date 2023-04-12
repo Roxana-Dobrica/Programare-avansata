@@ -32,7 +32,7 @@ public class DrawingPanel extends JPanel {
     private List<Dot> dots = new ArrayList<>();
     private List<Line> availableLines = new ArrayList<>();
     private Dot dot1, dot2;
-    private int color;
+    private int color = 0;
     private Player player1 = new Player("Player1");
     private Player player2 = new Player("Player2");
     private List<Line> deletedLines = new ArrayList<>();
