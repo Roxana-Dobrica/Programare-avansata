@@ -118,7 +118,7 @@ public class DrawingPanel extends JPanel {
                             player2.addSelectedLine(lineToRemove);
                             System.out.println(player2);
                             if (player1.checkTriangle()) {
-                                System.out.println("A castigat 1");
+                                System.out.println("A castigat 2");
                                 int confirmed = JOptionPane.showConfirmDialog(frame, "Player 1 wins! New game?", "End Game", JOptionPane.YES_NO_OPTION);
                                 if (confirmed == JOptionPane.NO_OPTION) {
                                     frame.dispose();

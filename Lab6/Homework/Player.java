@@ -41,9 +41,6 @@ public class Player implements Serializable {
         for (int i = 0; i < selectedLines.size() - 2; i++) {
             for (int j = i + 1; j < selectedLines.size() - 1; j++) {
                 for (int k = j + 1; k < selectedLines.size(); k++) {
-                    System.out.println(selectedLines.get(i).isConnected(selectedLines.get(j)) + " "
-                            + selectedLines.get(j).isConnected(selectedLines.get(k)) + " "
-                            + selectedLines.get(i).isConnected(selectedLines.get(k)));
                     if (selectedLines.get(i).isConnected(selectedLines.get(j))
                             && selectedLines.get(j).isConnected(selectedLines.get(k))
                             && selectedLines.get(i).isConnected(selectedLines.get(k))) {

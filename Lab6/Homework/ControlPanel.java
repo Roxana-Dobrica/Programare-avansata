@@ -59,6 +59,20 @@ public class ControlPanel extends JPanel {
         frame.dispose();
     }
 
+    private void exportGame(ActionEvent e) {
+        JFileChooser fileChooser = new JFileChooser();
+        int option = fileChooser.showSaveDialog(frame);
+        File file = fileChooser.getSelectedFile();
+        try {
+            ImageIO.write(frame.canvas.image, "PNG", file);
+            repaint();
+        } catch (IOException ex) {
+            System.err.println(ex);
+        }
+    }
+    
+    
+    
     private void loadGame(ActionEvent actionEvent) {
         try {
             ObjectInputStream in = new ObjectInputStream(new FileInputStream("savefile.ser"));
@@ -80,17 +94,6 @@ public class ControlPanel extends JPanel {
         }
     }
 
-    private void exportGame(ActionEvent e) {
-        JFileChooser fileChooser = new JFileChooser();
-        int option = fileChooser.showSaveDialog(frame);
-        File file = fileChooser.getSelectedFile();
-        try {
-            ImageIO.write(frame.canvas.image, "PNG", file);
-            repaint();
-        } catch (IOException ex) {
-            System.err.println(ex);
-        }
-    }
 
     private void resetGame(ActionEvent e) {
         frame.canvas.reset();
