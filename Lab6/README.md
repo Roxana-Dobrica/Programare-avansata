@@ -1,0 +1,5 @@
+Pentru a colora liniile, am implementat un algoritm in care jucatorii trebuie sa apese pe cele 2 puncte care reprezinta capetele liniei dorite. In functie de coordonatele mouse-ului, se verifica daca jucatorul a apasat pe un punct sau nu, apoi, in caz afirmativ, se verifica in ce caz din runda lui este jucatorul: 
+1) In cazul in care se selecteaza primul capat al liniei, colorandu-l pe acesta folosind culoarea lui
+2) In cazul in care trebuie sa selecteze si al doilea capat al liniei, colorandu-l si pe acesta folosind culoarea lui
+3) Apoi urmeaza cazul in care s-au selectat ambele capete, se verifica daca linia respectiva este valabila, apoi, in caz afirmativ, va fi atribuita jucatorului repectiv si va fi eliminata din lista liniilor disponibile, urmand ca mai apoi sa se verifice daca jucatorul a format un triunghi, caz in care va fi afisat un mesaj intr-o caseta cu jucatorul castigator. 
+Am utilizat o variabila color pentru a tine evidenta pentru fiecare runda a jucatorilor. Incrementez aceasta variabila dupa fiecare runda, iar daca este para, inseamna ca este runda primului jucator, altfel, este runda celui de-al doilea.
